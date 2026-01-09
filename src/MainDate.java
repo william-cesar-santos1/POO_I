@@ -1,5 +1,8 @@
+import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 public class MainDate {
 
@@ -40,7 +43,8 @@ public class MainDate {
          */
         var formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         var accumulado = valorInicial;
-        var vencimento = LocalDate.now();
+        var diaInicial = LocalDateTime.now();
+        var vencimento = diaInicial;
         System.out.printf("Saldo inicial: R$ %.2f%n", accumulado);
         for (int index = 1; index <= meses; index++) {
             accumulado += accumulado * (taxaJuros / 100);
@@ -51,6 +55,8 @@ public class MainDate {
                     formatter.format(vencimento)
             );
         }
+        var duration = Duration.between(diaInicial, vencimento);
+        System.out.printf("Total de dias decorridos: %d dias%n", duration.toMinutes());
     }
 
 }
