@@ -4,7 +4,7 @@ import java.time.format.DateTimeFormatter;
 public class MainDate {
 
     public static void main(String[] args) {
-        parcelas(10);
+        jurosCompostos(1000, 1f, 120);
     }
 
     public static void parcelas(int quantidade) {
@@ -38,6 +38,19 @@ public class MainDate {
          * Saldo após 3 meses: R$ 1.157,62, data 08/04/2024
          * ...
          */
+        var formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        var accumulado = valorInicial;
+        var vencimento = LocalDate.now();
+        System.out.printf("Saldo inicial: R$ %.2f%n", accumulado);
+        for (int index = 1; index <= meses; index++) {
+            accumulado += accumulado * (taxaJuros / 100);
+            vencimento = vencimento.plusMonths(1);
+            System.out.printf("Saldo após %d mês: R$ %.2f, data %s%n",
+                    index,
+                    accumulado,
+                    formatter.format(vencimento)
+            );
+        }
     }
 
 }
