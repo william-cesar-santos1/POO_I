@@ -1,6 +1,6 @@
 import java.util.List;
 
-public abstract class Motor {
+public abstract class Motor implements ProduzirForca {
 
     private String name;
     private Boolean start;
