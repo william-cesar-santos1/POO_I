@@ -2,10 +2,12 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
 public static void main(String[] args) {
+    Motor motor10 = new Motor10Turbo();
+
     HB20 hb20Branco = new HB20(
             "Confort Plus",
             4,
-            new Motor10Turbo()
+            motor10
     );
     hb20Branco.setCor("Branco");
     hb20Branco.ligar();

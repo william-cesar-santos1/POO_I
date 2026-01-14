@@ -6,10 +6,15 @@ public class MainInterfaceGeneric {
 
         Duck duck = new Duck();
         makeFly(duck);
+        makeWalk(duck);
     }
 
     public static void makeFly(Flyable flyable) {
         flyable.fly();
+        flyable.arrive();
     }
 
+    public static void makeWalk(Walkable walkable) {
+        walkable.walk();
+    }
 }
