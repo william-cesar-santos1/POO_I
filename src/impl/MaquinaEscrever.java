@@ -1,3 +1,7 @@
+package impl;
+
+import inherits.UtensilioDeEscrita;
+
 public class MaquinaEscrever extends UtensilioDeEscrita {
 
     @Override

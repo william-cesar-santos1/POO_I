@@ -1,3 +1,5 @@
+package inherits;
+
 public abstract class UtensilioDeEscrita {
 
 

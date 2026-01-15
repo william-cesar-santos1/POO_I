@@ -1,3 +1,7 @@
+package impl;
+
+import inherits.UtensilioDeEscrita;
+
 public class Caneta extends UtensilioDeEscrita {
 
     @Override
