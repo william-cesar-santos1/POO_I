@@ -1,4 +1,8 @@
-public class Cavalo implements ProduzirForca{
+package impl;
+
+import interfaces.ProduzirForca;
+
+public class Cavalo implements ProduzirForca {
 
     private String nome;
 
@@ -8,7 +12,7 @@ public class Cavalo implements ProduzirForca{
 
     @Override
     public String toString() {
-        return "Cavalo{" +
+        return "impl.Cavalo{" +
                 "nome='" + nome + '\'' +
                 '}';
     }

@@ -1,4 +1,10 @@
-public class Duck implements Flyable, Walkable, Swiming{
+package impl;
+
+import interfaces.Flyable;
+import interfaces.Swiming;
+import interfaces.Walkable;
+
+public class Duck implements Flyable, Walkable, Swiming {
 
     @Override
     public void fly() {
@@ -8,7 +14,7 @@ public class Duck implements Flyable, Walkable, Swiming{
     }
 
     @Override
-    public void arrive() {
+    public void land() {
         System.out.println("Pato: se preparando para pousar");
         System.out.println("Pato: aproximando do chao");
         System.out.println("Pato: pousou");

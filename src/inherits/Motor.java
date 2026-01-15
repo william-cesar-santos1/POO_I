@@ -1,3 +1,7 @@
+package inherits;
+
+import interfaces.ProduzirForca;
+
 import java.util.List;
 
 public abstract class Motor implements ProduzirForca {
@@ -35,7 +39,7 @@ public abstract class Motor implements ProduzirForca {
 
     @Override
     public String toString() {
-        return "Motor{" +
+        return "inherits.Motor{" +
                 "name='" + name + '\'' +
                 ", start=" + start +
                 ", pistons=" + pistons +

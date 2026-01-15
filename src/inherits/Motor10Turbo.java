@@ -1,9 +1,11 @@
+package inherits;
+
 import java.util.List;
 
 public class Motor10Turbo extends Motor{
 
     public Motor10Turbo() {
-        super("Motor 1.0 turbo", List.of("one", "two", "three"));
+        super("inherits.Motor 1.0 turbo", List.of("one", "two", "three"));
     }
 
     @Override

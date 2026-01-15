@@ -1,3 +1,8 @@
+import impl.Airplane;
+import impl.Duck;
+import interfaces.Flyable;
+import interfaces.Walkable;
+
 public class MainInterfaceGeneric {
 
     public static void main(String[] args) {
@@ -11,7 +16,7 @@ public class MainInterfaceGeneric {
 
     public static void makeFly(Flyable flyable) {
         flyable.fly();
-        flyable.arrive();
+        flyable.land();
     }
 
     public static void makeWalk(Walkable walkable) {

@@ -1,7 +1,9 @@
+package interfaces;
+
 public interface Flyable {
 
     void fly();
 
-    void arrive();
+    void land();
 
 }

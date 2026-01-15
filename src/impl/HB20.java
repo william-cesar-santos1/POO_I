@@ -1,3 +1,7 @@
+package impl;
+
+import inherits.Motor;
+
 public class HB20 {
 
     public static long versionUID = 2L;
@@ -20,11 +24,11 @@ public class HB20 {
         this.velocidadeAtual = 0;
     }
 
-    public String getCor(){
+    public String getCor() {
         return cor;
     }
 
-    public void setCor(String cor){
+    public void setCor(String cor) {
         this.cor = cor;
     }
 
@@ -66,7 +70,7 @@ public class HB20 {
 
     @Override
     public String toString() {
-        return "HB20{" +
+        return "impl.HB20{" +
                 "cor='" + cor + '\'' +
                 ", model='" + model + '\'' +
                 ", portAmount=" + portAmount +

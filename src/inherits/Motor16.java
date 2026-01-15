@@ -1,9 +1,11 @@
+package inherits;
+
 import java.util.List;
 
 public class Motor16 extends Motor{
 
     public Motor16() {
-        super("Motor 1.6", List.of("one", "two", "three", "four"));
+        super("inherits.Motor 1.6", List.of("one", "two", "three", "four"));
     }
 
     @Override

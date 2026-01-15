@@ -1,3 +1,7 @@
+package impl;
+
+import interfaces.Flyable;
+
 public class Airplane implements Flyable {
 
     @Override
@@ -9,7 +13,7 @@ public class Airplane implements Flyable {
     }
 
     @Override
-    public void arrive() {
+    public void land() {
         System.out.println("Avião: Iniciando descida");
         System.out.println("Avião: Aproximando-se da pista");
         System.out.println("Avião: Tocando a pista");

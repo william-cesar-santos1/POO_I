@@ -1,3 +1,5 @@
+package impl;
+
 public class Charrete {
 
     private int assentos;
@@ -19,7 +21,7 @@ public class Charrete {
 
     @Override
     public String toString() {
-        return "Charrete{" +
+        return "impl.Charrete{" +
                 "assentos=" + assentos +
                 ", cavalo=" + cavalo +
                 ", velocidadeAtual=" + velocidadeAtual +

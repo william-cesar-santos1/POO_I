@@ -1,8 +1,20 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
+import impl.HB20;
+import inherits.Motor;
+import inherits.Motor10Turbo;
+import inherits.Motor16;
+
 public static void main(String[] args) {
     Motor motor10 = new Motor10Turbo();
+
+    // Brasil -> Super class
+    // Paraná -> Sub class
+    // Posso sempre dizer que a sub class é do tipo super class
+    // Não posso dizer que a super class é do tipo sub class
+    // Todos os paranaenses são brasileiros
+    // Nem todos os brasileiros são paranaenses
 
     HB20 hb20Branco = new HB20(
             "Confort Plus",
