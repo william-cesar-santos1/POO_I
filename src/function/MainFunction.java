@@ -1,7 +1,10 @@
 package function;
 
+import interfaces.Walkable;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class MainFunction {
@@ -19,8 +22,14 @@ public class MainFunction {
         swimmers.add(new Crab());
         swimmers.add(new JellyFish());
 
+        Predicate<Swimmers> filter = new FishFilter();
+        // Lambda
+        // tipo variável = (parâmetros) -> expressão ou bloco
+        Predicate<Swimmers> filterLambda =
+                (Swimmers swimmers) -> swimmers instanceof Fish;
+
         List<CanFish> cansFish = swimmers.stream()
-                .filter(new FishFilter())
+                .filter(swimmers -> swimmers instanceof Fish)
                 .map(new SwimmersConverterToCanFish())
                 .collect(Collectors.toList());
         System.out.println(cansFish);
