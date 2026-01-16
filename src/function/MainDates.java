@@ -1,6 +1,7 @@
 package function;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,8 +22,15 @@ public class MainDates {
 
         // Aplique um filtro, utilizando a API de stream,
         // para obter apenas as datas posteriores a 31 de dezembro de 2020
+        var dateBase = LocalDate.of(2020, 12, 31);
+        var formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         dates.stream()
-                .filter(new LocalDateFilter())
+                .filter(new LocalDateFilter(dateBase))
+                // Até aqui temos um LocalDate. Porém, sem nenhum tipo de formatação.
+                // Aplique uma formatação para utilizar o padrão
+                // brasileiro de datas (dd/MM/yyyy)
+                // LocalDate -> String
+                .map(new LocalDateToString(formatter))
                 .forEach(System.out::println);
     }
 

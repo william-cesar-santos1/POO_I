@@ -2,7 +2,8 @@ package function;
 
 import java.util.function.Function;
 
-public class SwimmersConverterToCanFish implements Function<Swimmers, CanFish> {
+public class SwimmersConverterToCanFish
+        implements Function<Swimmers, CanFish> {
 
     @Override
     public CanFish apply(Swimmers fish) {
