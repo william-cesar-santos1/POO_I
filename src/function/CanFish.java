@@ -2,7 +2,7 @@ package function;
 
 public class CanFish {
 
-    private Fish fish;
+    private final Fish fish;
 
     public CanFish(Fish fish) {
         this.fish = fish;

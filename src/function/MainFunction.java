@@ -1,14 +1,15 @@
 package function;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MainFunction {
 
     private List<Swimmers> swimmers = new ArrayList<>();
 
     public static void main(String[] args) {
+        //https://struchkov.dev/blog/ru/content/images/2021/10/------------8.png
         MainFunction mainFunction = new MainFunction();
         mainFunction.start();
     }
@@ -18,10 +19,11 @@ public class MainFunction {
         swimmers.add(new Crab());
         swimmers.add(new JellyFish());
 
-        swimmers.stream()
+        List<CanFish> cansFish = swimmers.stream()
                 .filter(new FishFilter())
-                .forEach(fish ->
-                        System.out.println(fish.getClass().getSimpleName()));
+                .map(new SwimmersConverterToCanFish())
+                .collect(Collectors.toList());
+        System.out.println(cansFish);
     }
 
 }
