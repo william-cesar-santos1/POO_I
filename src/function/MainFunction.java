@@ -22,7 +22,6 @@ public class MainFunction {
         swimmers.add(new Crab());
         swimmers.add(new JellyFish());
 
-        Predicate<Swimmers> filter = new FishFilter();
         // Lambda
         // tipo variável = (parâmetros) -> expressão ou bloco
         Predicate<Swimmers> filterLambda =
@@ -30,7 +29,11 @@ public class MainFunction {
 
         List<CanFish> cansFish = swimmers.stream()
                 .filter(swimmers -> swimmers instanceof Fish)
-                .map(new SwimmersConverterToCanFish())
+                .map(swimmers -> (Fish) swimmers)// A partir deste ponto os nadadores são convertidos para peixe.
+
+                //.map(fish -> new CanFish(fish))
+                .map(CanFish::new)// Aqui, o parâmetro fish do construtor é implícito. E do tipo Fish, pois foi convertido no map acima.
+
                 .collect(Collectors.toList());
         System.out.println(cansFish);
     }

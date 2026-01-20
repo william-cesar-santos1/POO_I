@@ -25,12 +25,14 @@ public class MainDates {
         var dateBase = LocalDate.of(2020, 12, 31);
         var formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         dates.stream()
-                .filter(new LocalDateFilter(dateBase))
+                // Substitua a expressão abaixo por uma lambda
+                .filter(localDate -> localDate.isAfter(dateBase))
                 // Até aqui temos um LocalDate. Porém, sem nenhum tipo de formatação.
                 // Aplique uma formatação para utilizar o padrão
                 // brasileiro de datas (dd/MM/yyyy)
                 // LocalDate -> String
-                .map(new LocalDateToString(formatter))
+                // Substitua a expressão abaixo por uma lambda
+                .map(localDate -> localDate.format(formatter))
                 .forEach(System.out::println);
     }
 
