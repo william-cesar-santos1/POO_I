@@ -24,6 +24,14 @@ public class HB20 {
         this.velocidadeAtual = 0;
     }
 
+    public HB20(String cor, String model, int portAmount, Motor motor) {
+        this.cor = cor;
+        this.model = model;
+        this.portAmount = portAmount;
+        this.motor = motor;
+        this.velocidadeAtual = 0;
+    }
+
     public String getCor() {
         return cor;
     }
