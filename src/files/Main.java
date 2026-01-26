@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 public class Main {
 
     public static void main(String[] args) {
-        readJavaFiles(Paths.get("src"));
+        readContent(Paths.get("src/files/nome.txt"));
     }
 
     public static void createDirectory(Path path) {
@@ -23,6 +23,10 @@ public class Main {
             throw new RuntimeException(e);
         }
     }
+
+    // Crie um arquivo chamado nome.txt dentro do diretório raiz do projeto
+    // Escreva seu nome completo dentro do arquivo.
+    // Faça a leitura do arquivo e imprima o conteúdo no console.
 
     public static void readContent(Path path) {
         try {
